@@ -143,9 +143,89 @@ npx spec-kit-assistant uninstall [directory] [options]
 - Claude Code with slash command support
 - Optional: GitHub Spec Kit for enhanced integration
 
+## Publishing & Distribution
+
+### NPM Package
+This package is published to NPM as `spec-kit-assistant`. Install globally or use with npx:
+
+```bash
+# Direct installation via npx (recommended)
+npx spec-kit-assistant install
+
+# Or install globally first
+npm install -g spec-kit-assistant
+spec-kit-assistant install
+```
+
+### Publishing Process
+For maintainers publishing updates:
+
+```bash
+# 1. Update version in package.json
+npm version patch|minor|major
+
+# 2. Run validation
+npm run prepublishOnly
+
+# 3. Publish to NPM
+npm publish
+
+# 4. Push tags to git
+git push --tags
+```
+
+### Package Registry
+- **NPM**: https://www.npmjs.com/package/spec-kit-assistant
+- **GitHub**: https://github.com/chrismckenna/spec-kit-assistant
+- **Documentation**: Available in this README and included templates
+
+## Development
+
+### Local Testing
+```bash
+# Link package locally for testing
+npm link
+spec-kit-assistant install
+
+# Test CLI commands
+spec-kit-assistant --help
+spec-kit-assistant status
+```
+
+### Validation
+All commands are validated before publishing:
+```bash
+npm run prepublishOnly  # Runs scripts/validate-commands.js
+```
+
+## Troubleshooting
+
+### Installation Issues
+- Ensure Node.js 14+ is installed
+- Check that `.claude` directory is writable
+- Use `--force` flag to overwrite existing installations
+
+### Command Not Found
+- Verify installation with `spec-kit-assistant status`
+- Check Claude Code configuration for custom slash commands
+- Restart Claude Code after installation
+
+### GitHub Spec Kit Integration
+- Install in projects that already have `.specify/` directories
+- Commands work independently but enhance existing workflows
+- Use `/ska-resume` to integrate with existing spec-kit artifacts
+
 ## Contributing
 
 Contributions are welcome! Please feel free to submit issues or pull requests.
+
+### Development Setup
+1. Fork the repository
+2. Clone your fork: `git clone https://github.com/yourusername/spec-kit-assistant.git`
+3. Install dependencies: `npm install`
+4. Make your changes
+5. Test locally: `npm link && spec-kit-assistant install --force`
+6. Submit a pull request
 
 ## License
 
