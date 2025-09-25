@@ -1,0 +1,53 @@
+{
+  "name": "spec-kit-assistant",
+  "version": "1.0.0",
+  "description": "AI-assisted specification development slash commands for Claude Code, compatible with GitHub Spec Kit methodology",
+  "main": "bin/spec-kit-assistant.js",
+  "bin": {
+    "spec-kit-assistant": "./bin/spec-kit-assistant.js"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "prepublishOnly": "node scripts/validate-commands.js"
+  },
+  "keywords": [
+    "claude-code",
+    "slash-commands",
+    "spec-kit",
+    "ai-assistant",
+    "specification-driven-development",
+    "github-spec-kit"
+  ],
+  "author": "Chris McKenna",
+  "license": "MIT",
+  "preferGlobal": false,
+  "engines": {
+    "node": ">=14.0.0"
+  },
+  "files": [
+    "bin/",
+    "commands/",
+    "templates/",
+    "scripts/",
+    "README.md",
+    "LICENSE"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/chrismckenna/spec-kit-assistant.git"
+  },
+  "bugs": {
+    "url": "https://github.com/chrismckenna/spec-kit-assistant/issues"
+  },
+  "homepage": "https://github.com/chrismckenna/spec-kit-assistant#readme",
+  "dependencies": {
+    "fs-extra": "^11.1.1",
+    "chalk": "^4.1.2",
+    "inquirer": "^8.2.5",
+    "commander": "^9.5.0"
+  },
+  "devDependencies": {
+    "eslint": "^8.52.0",
+    "prettier": "^3.0.3"
+  }
+}
