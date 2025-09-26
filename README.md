@@ -13,6 +13,7 @@ Spec Kit Assistant transforms Claude Code into your personal GitHub Spec Kit pro
 - **📋 Research-Driven**: Use codebase analysis to inform specification development
 - **⚖️ Constitution Development**: Generate governance and team standards prompts
 - **🔗 GitHub Spec Kit Enhanced**: Maximize effectiveness of existing Spec Kit workflows
+- **🎫 Jira MCP Integration**: **NEW!** Direct Jira epic/story creation from GitHub Spec Kit tasks
 - **📤 Professional Outputs**: Export to Markdown, Jira, GitHub Issues, and more
 - **🏗️ Architecture Analysis**: Understand and improve existing system designs
 - **📊 Feature Prioritization**: Data-driven recommendations for development roadmaps
@@ -101,7 +102,8 @@ Once installed, use these slash commands in Claude Code:
 
 #### `/ska-export` - Output Formats
 - `markdown` - Comprehensive markdown documentation
-- `jira` - JIRA-compatible epics, stories, and tasks
+- `jira` - JIRA-compatible epics, stories, and tasks (file export)
+- `jira [space] [project-id]` - **NEW!** Direct JIRA integration via MCP (creates actual epics/stories)
 - `github-issues` - GitHub Issues and project templates
 - `confluence` - Confluence-compatible markup
 - `notion` - Notion-ready structured content
@@ -194,6 +196,27 @@ Spec Kit Assistant transforms your ideas into detailed, structured prompts for:
 /ska-constitution development # Generate constitution prompt
 # Result: "Here's your optimized prompt for GitHub Spec Kit: /constitution [detailed prompt]"
 ```
+
+### Jira MCP Integration - NEW!
+
+**Direct Jira Integration**: Create epics and stories directly in Jira from GitHub Spec Kit tasks
+
+```bash
+# After running GitHub Spec Kit workflow:
+/specify [your requirements]  # Creates spec.md
+/plan [your architecture]     # Creates plan.md  
+/tasks [your complexity]      # Creates tasks.md
+
+# Export directly to Jira (requires Jira MCP):
+/ska-export jira DEV PROJ-123
+# Result: Creates epics and stories in Jira project PROJ-123 in DEV space
+```
+
+**How it works**:
+1. **Detects Epic**: Uses current git branch name (set by `/specify`)
+2. **Reads Tasks**: Parses `specs/[branch-name]/tasks.md` created by `/tasks`
+3. **Creates in Jira**: Uses Jira MCP to create actual epics and stories
+4. **Stores Mapping**: Saves epic/story relationships in memory for AI implementation tracking
 
 ## Integration with GitHub Spec Kit
 
@@ -394,6 +417,7 @@ Professional artifact creation and integration:
 - **Node.js**: Version 14.0.0 or higher
 - **Claude Code**: Latest version with slash command support
 - **Optional**: GitHub Spec Kit for enhanced integration and compatibility
+- **Optional**: Jira MCP for direct Jira epic/story creation (`/ska-export jira [space] [project-id]`)
 
 ## Troubleshooting & FAQ
 
@@ -510,8 +534,8 @@ For quick validation and MVP development:
 /ska-export github-issues
 ```
 
-### 🏢 Enterprise Governance Workflow
-For large-scale, multi-team projects:
+### 🏢 Enterprise Governance Workflow with Jira Integration
+For large-scale, multi-team projects with direct Jira integration:
 
 ```bash
 # 1. Comprehensive codebase audit
@@ -519,18 +543,25 @@ For large-scale, multi-team projects:
 
 # 2. Generate detailed specification prompts with stakeholder input
 /ska-start dashboard
-# Result: Copy generated prompt → /specify [prompt]
+# Copy prompt → /specify [prompt] (this sets git branch and creates specs/[branch]/spec.md)
 
 # 3. Generate enterprise architecture planning prompts
 /ska-plan architecture
-# Result: Copy generated prompt → /plan [prompt]
+# Copy prompt → /plan [prompt] (this creates specs/[branch]/plan.md)
 
 # 4. Create comprehensive governance framework
 /ska-constitution enterprise
-# Result: Copy generated prompt → /constitution [prompt]
+# Copy prompt → /constitution [prompt]
 
-# 5. Export to project management and documentation systems
-/ska-export jira
+# 5. Generate implementation tasks
+# Copy prompt → /tasks [complexity] (this creates specs/[branch]/tasks.md)
+
+# 6. Export directly to Jira (creates actual epics and stories)
+/ska-export jira DEV ENTERPRISE-2024
+# Result: Epics and stories created in Jira, ready for AI implementation tracking
+
+# 7. Export additional documentation
+/ska-export confluence
 ```
 
 ## Publishing & Distribution
@@ -645,6 +676,6 @@ MIT License - see [LICENSE](LICENSE) file for details.
 3. **Generate Spec Prompt**: `/ska-start web-app` → Copy to `/specify [prompt]`
 4. **Generate Plan Prompt**: `/ska-plan architecture` → Copy to `/plan [prompt]`
 5. **Generate Constitution Prompt**: `/ska-constitution development` → Copy to `/constitution [prompt]`
-6. **Export**: `/ska-export markdown` (document results)
+6. **Export**: `/ska-export markdown` (document results) OR `/ska-export jira DEV PROJ-123` (direct Jira integration)
 
-Transform Claude Code into your personal GitHub Spec Kit prompt generator! 🚀
+Transform Claude Code into your personal GitHub Spec Kit prompt generator with Jira integration! 🚀
