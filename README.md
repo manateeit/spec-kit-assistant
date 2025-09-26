@@ -38,6 +38,7 @@ Once installed, use these slash commands in Claude Code:
 | Command | Description |
 |---------|-------------|
 | `/ska-start [project-type]` | Initialize specification workflow with AI guidance |
+| `/ska-research [depth]` | Research existing codebase and recommend features for spec development |
 | `/ska-plan [focus-area]` | Develop technical architecture and implementation strategy |
 | `/ska-tasks [complexity]` | Break down plan into actionable development tasks |
 | `/ska-analyze [focus]` | Perform quality analysis and validation |
@@ -47,7 +48,10 @@ Once installed, use these slash commands in Claude Code:
 ## Usage Example
 
 ```bash
-# Start a new specification workflow
+# Research existing codebase (great for existing projects!)
+/ska-research standard
+
+# Start a new specification workflow  
 /ska-start web-app
 
 # Develop technical plan

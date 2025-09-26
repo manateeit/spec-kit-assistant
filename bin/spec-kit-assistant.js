@@ -124,6 +124,7 @@ async function installCommands(targetDir, options = {}) {
   console.log(chalk.green(`\n🚀 Successfully installed ${installedCount} Spec Kit Assistant commands!`));
   console.log(chalk.cyan(`\nAvailable commands:`));
   console.log(chalk.white(`  /ska-start        - Initialize new specification workflow`));
+  console.log(chalk.white(`  /ska-research     - Research existing codebase and recommend features`));
   console.log(chalk.white(`  /ska-plan         - Transition to planning phase`));
   console.log(chalk.white(`  /ska-tasks        - Break down into actionable tasks`));
   console.log(chalk.white(`  /ska-analyze      - Perform quality analysis and validation`));
