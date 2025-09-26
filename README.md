@@ -12,8 +12,9 @@ Spec Kit Assistant transforms Claude Code into your personal GitHub Spec Kit pro
 - **🎯 Prompt Generation**: Create optimized prompts for GitHub Spec Kit commands
 - **📋 Research-Driven**: Use codebase analysis to inform specification development
 - **⚖️ Constitution Development**: Generate governance and team standards prompts
+- **📝 Template Enhancement**: **NEW!** Customize GitHub Spec Kit templates for organizational standards
 - **🔗 GitHub Spec Kit Enhanced**: Maximize effectiveness of existing Spec Kit workflows
-- **🎫 Jira MCP Integration**: **NEW!** Direct Jira epic/story creation from GitHub Spec Kit tasks
+- **🎫 Jira MCP Integration**: Direct Jira epic/story creation from GitHub Spec Kit tasks
 - **📤 Professional Outputs**: Export to Markdown, Jira, GitHub Issues, and more
 - **🏗️ Architecture Analysis**: Understand and improve existing system designs
 - **📊 Feature Prioritization**: Data-driven recommendations for development roadmaps
@@ -71,10 +72,11 @@ Once installed, use these slash commands in Claude Code:
 
 | Command | Description | Best For |
 |---------|-------------|----------|
-| `/ska-research [depth]` | **NEW!** Research existing codebase and recommend features | Legacy projects, new team members, feature planning |
+| `/ska-research [depth]` | Research existing codebase and recommend features | Legacy projects, new team members, feature planning |
 | `/ska-start [project-type]` | Generate optimized prompts for GitHub Spec Kit `/specify` | Requirements gathering, specification development |
 | `/ska-plan [focus-area]` | Generate optimized prompts for GitHub Spec Kit `/plan` | Technical architecture, system design |
-| `/ska-constitution [type]` | **NEW!** Generate prompts for GitHub Spec Kit `/constitution` | Development governance, team standards |
+| `/ska-constitution [type]` | Generate prompts for GitHub Spec Kit `/constitution` | Development governance, team standards |
+| `/ska-templates [template]` | **NEW!** Enhance GitHub Spec Kit templates for your organization | Template customization, organizational standards |
 | `/ska-resume [phase]` | Resume interrupted workflow from any phase | Continuing work, team handoffs |
 | `/ska-export [format]` | Export artifacts to various formats | Documentation, project management |
 
@@ -109,6 +111,13 @@ Once installed, use these slash commands in Claude Code:
 - `security` - Security practices, compliance, risk management
 - `custom` - Tailored constitution for specific organizational needs
 
+#### `/ska-templates` - Template Types
+- `spec` - Enhance specification template (spec-template.md)
+- `plan` - Enhance technical planning template (plan-template.md)
+- `tasks` - Enhance task breakdown template (tasks-template.md)
+- `agent` - Enhance AI agent behavior template (agent-file-template.md)
+- `all` - Interactive enhancement of all templates
+
 #### `/ska-export` - Output Formats
 - `markdown` - Comprehensive markdown documentation
 - `jira` - JIRA-compatible epics, stories, and tasks (file export)
@@ -136,7 +145,11 @@ Once installed, use these slash commands in Claude Code:
 /ska-constitution development
 # Result: Optimized prompt for /constitution command
 
-# 5. Export professional documentation
+# 5. Enhance GitHub Spec Kit templates for your organization
+/ska-templates all
+# Result: Interactive customization of templates in .specify/templates/
+
+# 6. Export professional documentation
 /ska-export markdown
 ```
 

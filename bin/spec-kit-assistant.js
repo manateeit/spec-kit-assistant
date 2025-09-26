@@ -127,11 +127,12 @@ async function installCommands(targetDir, options = {}) {
   console.log(chalk.white(`  /ska-start        - Generate prompts for GitHub Spec Kit /specify`));
   console.log(chalk.white(`  /ska-plan         - Generate prompts for GitHub Spec Kit /plan`));
   console.log(chalk.white(`  /ska-constitution - Generate prompts for GitHub Spec Kit /constitution`));
+  console.log(chalk.white(`  /ska-templates    - Enhance GitHub Spec Kit templates for your organization`));
   console.log(chalk.white(`  /ska-resume       - Resume interrupted workflow`));
   console.log(chalk.white(`  /ska-export       - Export workflow artifacts & Jira integration`));
   
   console.log(chalk.yellow(`\n💡 Tip: Use these commands in Claude Code to generate enhanced GitHub Spec Kit prompts!`));
-  console.log(chalk.cyan(`\n🆕 New: Jira MCP integration - /ska-export jira [space] [project-id]`));
+  console.log(chalk.cyan(`\n🆕 New: Template enhancement - /ska-templates [spec|plan|tasks|agent|all]`));
 }
 
 async function checkStatus(directory) {
@@ -250,13 +251,15 @@ async function updateCommands(directory) {
   
   // Show what's new
   console.log(chalk.yellow('\n🆕 Recent updates:'));
+  console.log(chalk.white('  • Template enhancement system for organizational customization'));
   console.log(chalk.white('  • Jira MCP integration for direct epic/story creation'));
   console.log(chalk.white('  • Enhanced prompt generation for GitHub Spec Kit commands'));
   console.log(chalk.white('  • New ska-constitution command for development governance'));
   console.log(chalk.white('  • Simplified architecture focused on prompt generation'));
   
-  console.log(chalk.cyan('\n💡 Try the new Jira integration:'));
-  console.log(chalk.gray('  /ska-export jira [space] [project-id]'));
+  console.log(chalk.cyan('\n💡 Try the new features:'));
+  console.log(chalk.gray('  /ska-templates all (customize templates for your organization)'));
+  console.log(chalk.gray('  /ska-export jira [space] [project-id] (direct Jira integration)'));
 }
 
 // Parse command line arguments
