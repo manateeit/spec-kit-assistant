@@ -1,0 +1,133 @@
+{
+  "$schema": "https://json-schema.org/draft/2019-09/schema",
+  "title": "Spec Kit Assistant Research Tracking",
+  "description": "Tracks research file locations and metadata for intelligent workflow integration",
+  "type": "object",
+  "properties": {
+    "projectInfo": {
+      "type": "object",
+      "properties": {
+        "name": "string",
+        "type": "string",
+        "description": "string",
+        "lastAnalyzed": "string",
+        "analysisDepth": {
+          "type": "string",
+          "enum": ["quick", "standard", "deep", "audit"]
+        }
+      }
+    },
+    "researchFiles": {
+      "type": "object",
+      "properties": {
+        "mainAnalysis": {
+          "type": "string",
+          "description": "Path to current codebase-analysis-latest.md"
+        },
+        "recommendationsIndex": {
+          "type": "string", 
+          "description": "Path to recommendations-index.md"
+        },
+        "architectureOverview": {
+          "type": "string",
+          "description": "Path to architecture-overview.md"
+        },
+        "changelog": {
+          "type": "string",
+          "description": "Path to research-changelog.md"
+        },
+        "archive": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "timestamp": "string",
+              "path": "string",
+              "analysisType": "string"
+            }
+          }
+        }
+      }
+    },
+    "recommendations": {
+      "type": "object",
+      "properties": {
+        "highPriority": {
+          "type": "array",
+          "items": {
+            "type": "object", 
+            "properties": {
+              "id": "string",
+              "title": "string",
+              "description": "string",
+              "impact": "number",
+              "effort": "number",
+              "priority": "string",
+              "category": "string",
+              "status": "string"
+            }
+          }
+        },
+        "mediumPriority": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "id": "string", 
+              "title": "string",
+              "description": "string",
+              "impact": "number",
+              "effort": "number",
+              "priority": "string",
+              "category": "string",
+              "status": "string"
+            }
+          }
+        },
+        "categories": {
+          "type": "object",
+          "properties": {
+            "userExperience": "array",
+            "performance": "array", 
+            "security": "array",
+            "architecture": "array",
+            "integration": "array",
+            "modernization": "array"
+          }
+        }
+      }
+    },
+    "workflow": {
+      "type": "object",
+      "properties": {
+        "activeSpecifications": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "id": "string",
+              "title": "string", 
+              "basedOnRecommendation": "string",
+              "phase": "string",
+              "lastUpdated": "string",
+              "specFile": "string"
+            }
+          }
+        },
+        "completedSpecs": {
+          "type": "array",
+          "items": "object"
+        }
+      }
+    },
+    "metadata": {
+      "type": "object",
+      "properties": {
+        "version": "string",
+        "created": "string",
+        "lastModified": "string",
+        "specKitAssistantVersion": "string"
+      }
+    }
+  }
+}

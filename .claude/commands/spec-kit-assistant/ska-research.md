@@ -143,4 +143,53 @@ I'll begin by examining your project structure and configuration files to unders
 - Documentation and README files
 - Deployment and infrastructure configuration
 
-**Ready to dive deep into your codebase! What aspects would you like me to focus on first, or shall I begin with a comprehensive analysis?**
+## 📁 Research Output Location
+
+I'll automatically save all research findings to structured markdown files in your project:
+
+```
+specs/
+└── research/
+    ├── codebase-analysis-[timestamp].md
+    ├── architecture-overview.md  
+    ├── feature-recommendations.md
+    └── spec-kit-development-plan.md
+```
+
+### Output Files Created:
+- **📊 Codebase Analysis**: Complete technical assessment with findings
+- **🏗️ Architecture Overview**: System design and component relationships  
+- **🎯 Feature Recommendations**: Prioritized improvement opportunities
+- **📋 Spec Kit Development Plan**: Roadmap for spec-driven development
+
+All files will be timestamped and organized for easy reference and team sharing.
+
+## 🔄 Incremental Research Process
+
+I'll first check for existing research files and build upon previous findings:
+
+### Smart Research Workflow:
+1. **🔍 Check Existing Research** - Look for previous analysis in `specs/research/`
+2. **📊 Load Previous Findings** - Read existing recommendations and assessments  
+3. **🔄 Incremental Analysis** - Focus on changes since last research
+4. **📝 Update Documentation** - Enhance existing files with new insights
+5. **🎯 Refresh Recommendations** - Update priority matrix based on new findings
+
+### File Management Strategy:
+- **Main Research File**: `specs/research/codebase-analysis-latest.md` (always current)
+- **Historical Archive**: `specs/research/archive/codebase-analysis-[timestamp].md`
+- **Change Tracking**: `specs/research/research-changelog.md` (incremental updates)
+- **Recommendations Index**: `specs/research/recommendations-index.md` (quick reference)
+
+## 🚀 Let's Begin Research
+
+I'll start by:
+1. Creating the research directory structure (`specs/research/`)
+2. Checking for existing research files
+3. Loading previous findings (if any) to build upon
+4. Performing systematic analysis (incremental or comprehensive)
+5. Saving all findings to organized markdown files
+
+**If this is your first research run, I'll perform a comprehensive analysis. If previous research exists, I'll do an incremental update focusing on changes and new opportunities.**
+
+Ready to dive deep into your codebase! What aspects would you like me to focus on first, or shall I begin with the intelligent analysis process?

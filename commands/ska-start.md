@@ -1,7 +1,7 @@
 ---
 description: Initialize AI-assisted specification development workflow (Spec Kit Assistant)
 argument-hint: [project-type]
-allowed-tools: TodoWrite, Read, Write, Bash
+allowed-tools: TodoWrite, Read, Write, Bash, Glob
 ---
 
 # Spec Kit Assistant - Initialization
@@ -37,8 +37,39 @@ After we create your specification, I can guide you through:
 - `/ska-tasks` - Breaking down into actionable development tasks
 - `/ska-analyze` - Quality assessment and validation
 
+## 🔍 Research Integration
+
+Before we begin, let me check if you have existing research findings that can guide our specification process:
+
+### Smart Start Options:
+1. **📊 Research-Guided Start** - Use findings from `/ska-research` to suggest high-priority features
+2. **🆕 Fresh Start** - Begin with your new concept from scratch
+3. **🔄 Hybrid Approach** - Combine research insights with new feature ideas
+
+I'll first check for research files in `specs/research/` and present any existing recommendations as starting points.
+
 ## 🤝 Let's Begin
 
+I'll start by checking for existing research findings to enhance our specification process:
+
+1. **📁 Check Research Files** - Look for `specs/research/recommendations-index.md` and related files
+2. **🎯 Present Options** - If research exists, I'll show prioritized feature recommendations
+3. **🚀 Begin Specification** - Guide you through comprehensive spec development
+
+### If Research Recommendations Exist:
+I'll present them as selectable options:
+- **High Priority Features** (recommended based on impact/effort analysis)
+- **User Experience Improvements** (identified pain points and solutions)  
+- **Technical Modernization** (architecture and performance enhancements)
+- **Integration Opportunities** (external system connections)
+
+You can:
+- ✅ **Select** a research-recommended feature to specify
+- ✏️ **Modify** a recommendation to better fit your needs
+- 🆕 **Create** something entirely new
+- 🔀 **Combine** multiple recommendations into one specification
+
+### If No Research Found:
 **Please describe your project idea or feature concept.** Even a rough description is perfect - I'll ask targeted questions to help you develop it into a comprehensive specification.
 
-What are you looking to build?
+**Ready to create your specification! Let me check for research findings first, then we'll dive into your project.**
