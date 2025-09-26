@@ -230,9 +230,11 @@ I'll execute this step-by-step process:
 **Missing Jira MCP**:
 ```
 ❌ Jira MCP not detected. Please install Jira MCP first:
-   1. Install MCP: [installation instructions]
-   2. Configure Jira credentials
-   3. Verify connection: [test command]
+   
+   1. Install MCP Jira Server: https://github.com/manateeit/mcp-jira-server
+   2. Follow setup instructions for Claude Code integration
+   3. Configure Jira credentials and test connection
+   
    Then retry: /ska-export jira [space] [project-id]
 ```
 

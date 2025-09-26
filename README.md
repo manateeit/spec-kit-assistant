@@ -417,7 +417,7 @@ Professional artifact creation and integration:
 - **Node.js**: Version 14.0.0 or higher
 - **Claude Code**: Latest version with slash command support
 - **Optional**: GitHub Spec Kit for enhanced integration and compatibility
-- **Optional**: Jira MCP for direct Jira epic/story creation (`/ska-export jira [space] [project-id]`)
+- **Optional**: [Jira MCP Server](https://github.com/manateeit/mcp-jira-server) for direct Jira epic/story creation (`/ska-export jira [space] [project-id]`)
 
 ## Troubleshooting & FAQ
 
@@ -488,6 +488,31 @@ head .claude/commands/spec-kit-assistant/ska-start.md
 - **Solution**: Each command is independent - you can jump to any phase
 - **Recommended**: Follow the sequence for best results
 - **Flexible**: Use `/ska-resume` to return to previous phases
+
+### 🎫 Jira Integration Issues
+
+**Problem**: `Jira MCP not detected` when running `/ska-export jira [space] [project-id]`
+```bash
+# Solution: Install Jira MCP Server
+1. Visit: https://github.com/manateeit/mcp-jira-server
+2. Follow installation instructions for Claude Code
+3. Configure Jira credentials and test connection
+4. Retry: /ska-export jira [space] [project-id]
+```
+
+**Problem**: `No tasks.md found` error
+```bash
+# Solution: Complete GitHub Spec Kit workflow first
+1. /specify [your requirements]  # Sets git branch, creates spec.md
+2. /plan [your architecture]     # Creates plan.md  
+3. /tasks [your complexity]      # Creates tasks.md ← Required file
+4. /ska-export jira DEV PROJ-123 # Now works
+```
+
+**Problem**: `Invalid Jira space or project ID` 
+- **Solution**: Verify Jira space name and project ID format (e.g., DEV, PROJ-123)
+- **Check**: Ensure MCP has proper permissions to create epics/stories
+- **Test**: Try creating a simple issue manually to verify access
 
 ## Advanced Usage
 
