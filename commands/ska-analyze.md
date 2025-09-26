@@ -6,7 +6,25 @@ allowed-tools: TodoWrite, Read, Write, Bash, Grep
 
 # Spec Kit Assistant - Analysis & Validation Phase
 
-I'm in **Analysis & Validation** mode, providing comprehensive quality assessment and improvement recommendations for your specification, plan, and task breakdown.
+I'm transitioning to **Analysis & Validation** mode, where we provide comprehensive quality assessment and improvement recommendations. I can work in two modes:
+
+## 🎯 Choose Your Analysis Mode
+
+**Please select how you'd like to proceed:**
+
+### 📝 Mode 1: Prompt Generator (For GitHub Spec Kit `/analyze`)
+- I'll create a **comprehensive prompt for the `/analyze` command**
+- **Output**: Detailed prompt ready to copy/paste into `/analyze`
+- **Best for**: Teams using GitHub Spec Kit workflow
+- **Result**: Optimized prompt to run: `/analyze [generated prompt]`
+
+### 🤖 Mode 2: Direct Analysis (Interactive Validation)
+- I'll guide you through **interactive quality analysis and validation**  
+- **Output**: Complete analysis report with improvement recommendations
+- **Best for**: Teams wanting guided quality assessment
+- **Result**: Full analysis with actionable improvement plan
+
+**Type 'prompt' for Mode 1 or 'direct' for Mode 2**
 
 ## 🎯 Analysis Objectives
 
@@ -102,4 +120,55 @@ After analysis:
 - `/ska-export` - Export analysis results and recommendations
 - `/ska-resume` - Return to previous phases to address findings
 
-**Ready to analyze your specification-driven development artifacts. Which analysis focus would be most valuable?**
+## 🔧 Mode-Specific Workflows
+
+### Mode 1: Prompt Generator Workflow
+1. **📊 Gather Artifacts** - I'll review specification, plan, and tasks
+2. **🎯 Define Analysis Scope** - Determine focus areas and quality requirements  
+3. **📝 Craft Analysis Prompt** - Generate a comprehensive, structured prompt
+4. **✅ Validate** - Ensure the prompt covers all analysis requirements
+5. **📤 Deliver** - Provide ready-to-use prompt for `/analyze`
+
+**Example Output:**
+```
+Here's your optimized prompt for GitHub Spec Kit:
+
+/analyze
+
+Perform comprehensive quality analysis on the user authentication system:
+
+Analysis artifacts:
+- Specification: Complete user authentication requirements with 15 user stories
+- Technical Plan: JWT-based architecture with OAuth 2.0 integration
+- Task Breakdown: 45 development tasks across 6-week timeline
+- Team Context: 6 developers, mixed skill levels, enterprise security requirements
+
+Analysis dimensions (target 85%+ for each):
+- Completeness Analysis: All requirements addressed, edge cases covered
+- Technical Feasibility: Architecture scalability, technology maturity assessment  
+- Business Alignment: Requirements traceability, measurable outcomes
+- Quality Assurance: Test coverage strategy, risk mitigation completeness
+
+Focus areas for deep analysis:
+- Security compliance (OAUTH 2.0, RBAC, JWT token management)
+- Integration complexity with existing user management system
+- Scalability requirements for 50,000+ concurrent users
+- Timeline feasibility with current team structure
+
+Provide:
+- Quality scorecard with dimensional scores
+- Critical gaps and missing elements  
+- Prioritized improvement recommendations
+- Implementation optimization opportunities
+
+[Detailed, comprehensive prompt continues...]
+```
+
+### Mode 2: Direct Analysis Workflow  
+1. **🔍 Artifact Review** - Systematic examination of all development artifacts
+2. **📊 Multi-Dimensional Assessment** - Quality scoring across all dimensions
+3. **🎯 Gap Analysis** - Identify missing elements and improvement areas
+4. **📋 Recommendations** - Prioritized improvement plan with actionable items
+5. **💾 Export Results** - Analysis reports and improvement tracking
+
+**Ready to analyze your development artifacts! Let me check for existing specifications and plans first, then we'll select your mode and dive into quality assessment.**

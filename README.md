@@ -165,6 +165,41 @@ Once installed, use these slash commands in Claude Code:
 /ska-export github-issues
 ```
 
+## Dual-Mode Operation
+
+**NEW!** All main Spec Kit Assistant commands now support dual-mode operation to provide maximum flexibility:
+
+### 🎯 Mode Selection
+When you run `/ska-start`, `/ska-plan`, `/ska-tasks`, or `/ska-analyze`, you'll be prompted to choose:
+
+**📝 Mode 1: Prompt Generator**
+- Generates optimized prompts for GitHub Spec Kit commands
+- Output: Ready-to-copy prompt for `/specify`, `/plan`, `/tasks`, `/analyze`
+- Perfect for teams using GitHub Spec Kit who want AI-enhanced prompts
+- Result: Professional, comprehensive prompts that maximize Spec Kit effectiveness
+
+**🤖 Mode 2: Direct Interactive Assistant**
+- Provides full interactive AI guidance through each phase
+- Output: Complete specifications, plans, tasks, and analysis
+- Perfect for teams wanting end-to-end AI assistance
+- Result: Professional artifacts ready for implementation
+
+### Example Mode Usage
+
+**Prompt Generation Mode:**
+```bash
+/ska-start mobile-app
+# Choose: "prompt" 
+# Result: Optimized prompt ready for "/specify [generated prompt]"
+```
+
+**Interactive Mode:**
+```bash
+/ska-start mobile-app  
+# Choose: "direct"
+# Result: Complete interactive specification development
+```
+
 ## Integration with GitHub Spec Kit
 
 Spec Kit Assistant is designed to work seamlessly with GitHub's Spec Kit:
@@ -174,11 +209,13 @@ Spec Kit Assistant is designed to work seamlessly with GitHub's Spec Kit:
 - **📁 Preserves**: Maintains existing `.specify/` directory structure  
 - **➕ Extends**: Adds research, analysis, and export capabilities
 - **🔄 Interoperable**: `/ska-resume` can integrate with existing spec-kit artifacts
+- **🎯 Dual-Mode**: Generate prompts for Spec Kit OR work independently
 
 ### Spec Kit Detection
 The installer automatically detects existing GitHub Spec Kit installations:
 - **Standalone Mode**: Works independently in any project
 - **Enhanced Mode**: Integrates with existing `.specify/` workflows
+- **Prompt Generation**: Creates optimized prompts for existing Spec Kit commands
 - **Constitution Compatibility**: Respects existing project methodologies
 
 ## Project Structure

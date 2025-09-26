@@ -6,7 +6,25 @@ allowed-tools: TodoWrite, Read, Write, Bash
 
 # Spec Kit Assistant - Technical Planning Phase
 
-I'm transitioning to **Technical Planning** mode, where we transform your specification into a detailed implementation roadmap.
+I'm transitioning to **Technical Planning** mode, where we transform your specification into a detailed implementation roadmap. I can work in two modes:
+
+## 🎯 Choose Your Planning Mode
+
+**Please select how you'd like to proceed:**
+
+### 📝 Mode 1: Prompt Generator (For GitHub Spec Kit `/plan`)
+- I'll create a **comprehensive prompt for the `/plan` command**
+- **Output**: Detailed prompt ready to copy/paste into `/plan`
+- **Best for**: Teams using GitHub Spec Kit workflow
+- **Result**: Optimized prompt to run: `/plan [generated prompt]`
+
+### 🤖 Mode 2: Direct Planning (Interactive Development)
+- I'll guide you through **interactive technical planning**  
+- **Output**: Complete technical plan with architecture decisions
+- **Best for**: Teams wanting guided technical architecture development
+- **Result**: Full technical plan ready for task breakdown
+
+**Type 'prompt' for Mode 1 or 'direct' for Mode 2**
 
 ## 🏗️ Planning Objectives
 
