@@ -49,12 +49,21 @@ npx spec-kit-assistant status --global
 
 ### 🔄 Update Existing Installation
 ```bash
-# Update commands in current directory
+# Update commands in current directory (recommended)
 npx spec-kit-assistant update
 
-# Force reinstall (overwrites existing)
+# Update commands in specific directory
+npx spec-kit-assistant update /path/to/your/project
+
+# Alternative: Force reinstall (overwrites existing)
 npx spec-kit-assistant install --force
 ```
+
+**What the update does:**
+- Automatically detects existing installations (project and/or global)
+- Updates all command files with latest features
+- Shows you what's new in the latest version
+- Preserves your installation preferences (project vs global)
 
 ## Available Commands
 
@@ -275,7 +284,7 @@ npx spec-kit-assistant install [directory] [options]
 # Check installation status
 npx spec-kit-assistant status [directory]
 
-# Update existing installation  
+# Update existing installation (detects project/global automatically)
 npx spec-kit-assistant update [directory]
 
 # Remove installation
@@ -449,6 +458,21 @@ npx spec-kit-assistant status
 # Solution 3: Check file contents
 ls -la .claude/commands/spec-kit-assistant/
 head .claude/commands/spec-kit-assistant/ska-start.md
+```
+
+**Problem**: Missing new features (Jira integration, ska-constitution, etc.)
+```bash
+# Solution: Update to latest version
+npx spec-kit-assistant update
+# This automatically detects your installation and updates all commands
+```
+
+**Problem**: Update command not working
+```bash
+# Alternative solution: Force reinstall
+npx spec-kit-assistant install --force
+# Or check what's installed first:
+npx spec-kit-assistant status
 ```
 
 ### 💬 Command Usage Issues

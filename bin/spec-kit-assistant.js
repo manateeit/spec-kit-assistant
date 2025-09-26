@@ -123,15 +123,15 @@ async function installCommands(targetDir, options = {}) {
 
   console.log(chalk.green(`\n🚀 Successfully installed ${installedCount} Spec Kit Assistant commands!`));
   console.log(chalk.cyan(`\nAvailable commands:`));
-  console.log(chalk.white(`  /ska-start        - Initialize new specification workflow`));
   console.log(chalk.white(`  /ska-research     - Research existing codebase and recommend features`));
-  console.log(chalk.white(`  /ska-plan         - Transition to planning phase`));
-  console.log(chalk.white(`  /ska-tasks        - Break down into actionable tasks`));
-  console.log(chalk.white(`  /ska-analyze      - Perform quality analysis and validation`));
+  console.log(chalk.white(`  /ska-start        - Generate prompts for GitHub Spec Kit /specify`));
+  console.log(chalk.white(`  /ska-plan         - Generate prompts for GitHub Spec Kit /plan`));
+  console.log(chalk.white(`  /ska-constitution - Generate prompts for GitHub Spec Kit /constitution`));
   console.log(chalk.white(`  /ska-resume       - Resume interrupted workflow`));
-  console.log(chalk.white(`  /ska-export       - Export workflow artifacts`));
+  console.log(chalk.white(`  /ska-export       - Export workflow artifacts & Jira integration`));
   
-  console.log(chalk.yellow(`\n💡 Tip: Use these commands in Claude Code to enhance your spec-driven development workflow!`));
+  console.log(chalk.yellow(`\n💡 Tip: Use these commands in Claude Code to generate enhanced GitHub Spec Kit prompts!`));
+  console.log(chalk.cyan(`\n🆕 New: Jira MCP integration - /ska-export jira [space] [project-id]`));
 }
 
 async function checkStatus(directory) {
@@ -212,12 +212,51 @@ async function uninstallCommands(targetDir, options = {}) {
 }
 
 async function updateCommands(directory) {
+  const workingDir = directory || process.cwd();
+  
   console.log(chalk.blue('🔄 Updating Spec Kit Assistant commands...'));
   
-  // Update is essentially a forced install
-  await installCommands(directory, { force: true });
+  // Check current installation
+  const projectDir = path.join(workingDir, '.claude', 'commands', 'spec-kit-assistant');
+  const globalDir = path.join(require('os').homedir(), '.claude', 'commands', 'spec-kit-assistant');
   
-  console.log(chalk.green('✅ Update completed!'));
+  const projectExists = await fs.pathExists(projectDir);
+  const globalExists = await fs.pathExists(globalDir);
+  
+  if (!projectExists && !globalExists) {
+    console.log(chalk.red('❌ No existing Spec Kit Assistant installation found.'));
+    console.log(chalk.yellow('💡 Use `npx spec-kit-assistant install` to install first.'));
+    return;
+  }
+  
+  let updatedLocations = [];
+  
+  // Update project installation if it exists
+  if (projectExists) {
+    console.log(chalk.cyan('📁 Updating project installation...'));
+    await installCommands(directory, { force: true, project: true });
+    updatedLocations.push('project (.claude/commands/spec-kit-assistant)');
+  }
+  
+  // Update global installation if it exists  
+  if (globalExists) {
+    console.log(chalk.cyan('🌐 Updating global installation...'));
+    await installCommands(directory, { force: true, global: true });
+    updatedLocations.push('global (~/.claude/commands/spec-kit-assistant)');
+  }
+  
+  console.log(chalk.green(`\n✅ Update completed successfully!`));
+  console.log(chalk.gray(`Updated locations: ${updatedLocations.join(', ')}`));
+  
+  // Show what's new
+  console.log(chalk.yellow('\n🆕 Recent updates:'));
+  console.log(chalk.white('  • Jira MCP integration for direct epic/story creation'));
+  console.log(chalk.white('  • Enhanced prompt generation for GitHub Spec Kit commands'));
+  console.log(chalk.white('  • New ska-constitution command for development governance'));
+  console.log(chalk.white('  • Simplified architecture focused on prompt generation'));
+  
+  console.log(chalk.cyan('\n💡 Try the new Jira integration:'));
+  console.log(chalk.gray('  /ska-export jira [space] [project-id]'));
 }
 
 // Parse command line arguments
