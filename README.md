@@ -4,15 +4,15 @@
 
 ## Overview
 
-Spec Kit Assistant transforms Claude Code into your personal specification development expert. It provides systematic, AI-guided workflows for both **new projects** and **existing codebases**, helping you create comprehensive specifications, technical plans, actionable tasks, and quality analysis through proven methodologies.
+Spec Kit Assistant transforms Claude Code into your personal GitHub Spec Kit prompt generator. It analyzes existing codebases, understands your project requirements, and creates comprehensive, professional prompts that maximize the effectiveness of GitHub Spec Kit commands (`/specify`, `/plan`, `/constitution`).
 
 ## Features
 
-- **🔍 Codebase Research**: NEW! Analyze existing projects and identify improvement opportunities
-- **📋 5-Phase Methodology**: Research → Specification → Planning → Tasks → Analysis
-- **🤖 AI-Guided Exploration**: Structured questioning to develop comprehensive requirements
-- **🔗 GitHub Spec Kit Compatible**: Works alongside existing spec-kit workflows
-- **✅ Quality Assurance**: Built-in validation and analysis frameworks (85%+ quality targets)
+- **🔍 Codebase Research**: Analyze existing projects and identify improvement opportunities
+- **🎯 Prompt Generation**: Create optimized prompts for GitHub Spec Kit commands
+- **📋 Research-Driven**: Use codebase analysis to inform specification development
+- **⚖️ Constitution Development**: Generate governance and team standards prompts
+- **🔗 GitHub Spec Kit Enhanced**: Maximize effectiveness of existing Spec Kit workflows
 - **📤 Professional Outputs**: Export to Markdown, Jira, GitHub Issues, and more
 - **🏗️ Architecture Analysis**: Understand and improve existing system designs
 - **📊 Feature Prioritization**: Data-driven recommendations for development roadmaps
@@ -62,10 +62,9 @@ Once installed, use these slash commands in Claude Code:
 | Command | Description | Best For |
 |---------|-------------|----------|
 | `/ska-research [depth]` | **NEW!** Research existing codebase and recommend features | Legacy projects, new team members, feature planning |
-| `/ska-start [project-type]` | Initialize specification workflow with AI guidance | New features, requirements gathering |
-| `/ska-plan [focus-area]` | Develop technical architecture and implementation strategy | System design, technology selection |
-| `/ska-tasks [complexity]` | Break down plan into actionable development tasks | Sprint planning, work estimation |
-| `/ska-analyze [focus]` | Perform quality analysis and validation | Quality assurance, risk assessment |
+| `/ska-start [project-type]` | Generate optimized prompts for GitHub Spec Kit `/specify` | Requirements gathering, specification development |
+| `/ska-plan [focus-area]` | Generate optimized prompts for GitHub Spec Kit `/plan` | Technical architecture, system design |
+| `/ska-constitution [type]` | **NEW!** Generate prompts for GitHub Spec Kit `/constitution` | Development governance, team standards |
 | `/ska-resume [phase]` | Resume interrupted workflow from any phase | Continuing work, team handoffs |
 | `/ska-export [format]` | Export artifacts to various formats | Documentation, project management |
 
@@ -92,18 +91,13 @@ Once installed, use these slash commands in Claude Code:
 - `security` - Authentication, authorization, compliance
 - `integration` - External systems and APIs
 
-#### `/ska-tasks` - Complexity Levels
-- `simple` - Straightforward implementations (1-3 components)
-- `moderate` - Multi-component systems (standard complexity)
-- `complex` - Enterprise systems with extensive dependencies
-- `enterprise` - Large-scale systems with multiple stakeholders
-
-#### `/ska-analyze` - Focus Areas
-- `completeness` - Requirements coverage and gap analysis
-- `technical` - Architecture and implementation feasibility
-- `business` - Value alignment and stakeholder needs  
-- `quality` - Testing strategy and risk management
-- `all` - Complete multi-dimensional analysis
+#### `/ska-constitution` - Constitution Types
+- `development` - Development workflow, coding standards, quality processes
+- `collaboration` - Team communication, decision-making, coordination
+- `quality` - Testing strategies, code review, quality assurance
+- `architecture` - System design principles, patterns, technical decisions
+- `security` - Security practices, compliance, risk management
+- `custom` - Tailored constitution for specific organizational needs
 
 #### `/ska-export` - Output Formats
 - `markdown` - Comprehensive markdown documentation
@@ -119,37 +113,37 @@ Once installed, use these slash commands in Claude Code:
 # 1. Analyze your existing codebase
 /ska-research standard
 
-# 2. Specify improvements found by research  
+# 2. Generate specification prompts based on research findings  
 /ska-start web-app
+# Result: Optimized prompt for /specify command
 
-# 3. Plan implementation strategy
+# 3. Generate technical planning prompts
 /ska-plan architecture
+# Result: Optimized prompt for /plan command
 
-# 4. Break down into actionable tasks
-/ska-tasks moderate
+# 4. Create development governance standards
+/ska-constitution development
+# Result: Optimized prompt for /constitution command
 
-# 5. Validate quality and completeness
-/ska-analyze completeness
-
-# 6. Export professional documentation
+# 5. Export professional documentation
 /ska-export markdown
 ```
 
-### 🆕 For New Projects (Specification-First Approach)
+### 🆕 For New Projects (Prompt Generation Approach)
 ```bash
-# 1. Start with your concept
+# 1. Start with your concept - generate specification prompt
 /ska-start mobile-app
+# Copy the generated prompt and run: /specify [generated prompt]
 
-# 2. Develop technical architecture
+# 2. Generate technical architecture prompt
 /ska-plan technology
+# Copy the generated prompt and run: /plan [generated prompt]
 
-# 3. Create implementation roadmap
-/ska-tasks complex
+# 3. Create team governance standards
+/ska-constitution collaboration
+# Copy the generated prompt and run: /constitution [generated prompt]
 
-# 4. Perform quality analysis
-/ska-analyze all
-
-# 5. Export to project management tools
+# 4. Export to project management tools
 /ska-export jira
 ```
 
@@ -165,58 +159,59 @@ Once installed, use these slash commands in Claude Code:
 /ska-export github-issues
 ```
 
-## Dual-Mode Operation
+## Prompt Generation Focus
 
-**NEW!** All main Spec Kit Assistant commands now support dual-mode operation to provide maximum flexibility:
+**NEW!** Spec Kit Assistant is now optimized as a **prompt generator** for GitHub Spec Kit commands, creating professional, comprehensive prompts that maximize the effectiveness of Spec Kit workflows:
 
-### 🎯 Mode Selection
-When you run `/ska-start`, `/ska-plan`, `/ska-tasks`, or `/ska-analyze`, you'll be prompted to choose:
+### 🎯 Optimized Prompt Creation
+Spec Kit Assistant transforms your ideas into detailed, structured prompts for:
 
-**📝 Mode 1: Prompt Generator**
-- Generates optimized prompts for GitHub Spec Kit commands
-- Output: Ready-to-copy prompt for `/specify`, `/plan`, `/tasks`, `/analyze`
-- Perfect for teams using GitHub Spec Kit who want AI-enhanced prompts
-- Result: Professional, comprehensive prompts that maximize Spec Kit effectiveness
+**📋 `/specify` Enhancement**
+- Use `/ska-start` to generate comprehensive specification prompts
+- Incorporates research findings, user stories, and technical requirements
+- Result: Professional prompts ready for GitHub Spec Kit `/specify`
 
-**🤖 Mode 2: Direct Interactive Assistant**
-- Provides full interactive AI guidance through each phase
-- Output: Complete specifications, plans, tasks, and analysis
-- Perfect for teams wanting end-to-end AI assistance
-- Result: Professional artifacts ready for implementation
+**🏗️ `/plan` Enhancement**  
+- Use `/ska-plan` to generate detailed technical planning prompts
+- Includes architecture decisions, technology stack, and implementation strategy
+- Result: Comprehensive prompts ready for GitHub Spec Kit `/plan`
 
-### Example Mode Usage
+**⚖️ `/constitution` Enhancement**
+- Use `/ska-constitution` to generate governance and standards prompts  
+- Covers development workflow, quality processes, and team collaboration
+- Result: Complete prompts ready for GitHub Spec Kit `/constitution`
 
-**Prompt Generation Mode:**
+### Example Prompt Generation
+
 ```bash
-/ska-start mobile-app
-# Choose: "prompt" 
-# Result: Optimized prompt ready for "/specify [generated prompt]"
-```
+/ska-research standard    # Analyze existing codebase
+/ska-start web-app        # Generate specification prompt
+# Result: "Here's your optimized prompt for GitHub Spec Kit: /specify [detailed prompt]"
 
-**Interactive Mode:**
-```bash
-/ska-start mobile-app  
-# Choose: "direct"
-# Result: Complete interactive specification development
+/ska-plan architecture    # Generate planning prompt  
+# Result: "Here's your optimized prompt for GitHub Spec Kit: /plan [detailed prompt]"
+
+/ska-constitution development # Generate constitution prompt
+# Result: "Here's your optimized prompt for GitHub Spec Kit: /constitution [detailed prompt]"
 ```
 
 ## Integration with GitHub Spec Kit
 
-Spec Kit Assistant is designed to work seamlessly with GitHub's Spec Kit:
+Spec Kit Assistant is designed as the perfect companion to GitHub's Spec Kit:
 
-- **✅ Compatible**: Works alongside `/specify`, `/plan`, `/tasks` commands
-- **🚀 Enhanced**: Provides AI-guided exploration for better specifications
-- **📁 Preserves**: Maintains existing `.specify/` directory structure  
-- **➕ Extends**: Adds research, analysis, and export capabilities
-- **🔄 Interoperable**: `/ska-resume` can integrate with existing spec-kit artifacts
-- **🎯 Dual-Mode**: Generate prompts for Spec Kit OR work independently
+- **🎯 Prompt Enhancement**: Transforms basic ideas into comprehensive Spec Kit prompts
+- **🔍 Research Integration**: Uses codebase analysis to inform prompt generation
+- **📁 Preserves Workflow**: Maintains existing `.specify/` directory structure  
+- **➕ Extends Capabilities**: Adds research, constitution development, and export features
+- **🔄 Seamless Integration**: Generated prompts work directly with existing Spec Kit commands
+- **⚖️ Constitution Support**: Adds governance capabilities not in basic Spec Kit
 
-### Spec Kit Detection
+### Spec Kit Enhancement Workflow
 The installer automatically detects existing GitHub Spec Kit installations:
-- **Standalone Mode**: Works independently in any project
-- **Enhanced Mode**: Integrates with existing `.specify/` workflows
-- **Prompt Generation**: Creates optimized prompts for existing Spec Kit commands
-- **Constitution Compatibility**: Respects existing project methodologies
+- **Enhanced Prompts**: Creates detailed, structured prompts for better Spec Kit results
+- **Research-Driven**: Uses codebase analysis to inform specification development
+- **Constitution Development**: Adds governance and standards development capabilities
+- **Full Compatibility**: Works perfectly alongside existing Spec Kit workflows
 
 ## Project Structure
 
@@ -226,13 +221,12 @@ After installation, commands are added to your `.claude/commands/spec-kit-assist
 .claude/
 └── commands/
     └── spec-kit-assistant/
-        ├── ska-research.md    # NEW! Codebase analysis
-        ├── ska-start.md       # Specification workflow
-        ├── ska-plan.md        # Technical planning
-        ├── ska-tasks.md       # Task breakdown
-        ├── ska-analyze.md     # Quality analysis
-        ├── ska-resume.md      # Workflow resumption
-        └── ska-export.md      # Artifact export
+        ├── ska-research.md      # Codebase analysis and feature recommendations
+        ├── ska-start.md         # Generate `/specify` prompts for specifications
+        ├── ska-plan.md          # Generate `/plan` prompts for technical planning
+        ├── ska-constitution.md  # NEW! Generate `/constitution` prompts for governance
+        ├── ska-resume.md        # Workflow resumption and context recovery
+        └── ska-export.md        # Artifact export and documentation
 ```
 
 ## CLI Commands Reference
@@ -352,59 +346,29 @@ Technical architecture development with expert guidance:
 - Risk mitigation planning and contingency strategies
 - Quality assurance integration and testing approach
 
-### Phase 3: Task Breakdown (`/ska-tasks`)  
-Actionable development planning with TDD integration:
+### Phase 3: Constitution (`/ska-constitution`) - NEW!
+Development governance and team standards:
 
-**📦 Work Package Definition**
-- Feature grouping and logical task organization
-- Dependency mapping and sequence optimization
-- Task sizing (4-8 hour optimal size) and effort estimation
-- Acceptance criteria definition and completion validation
+**⚖️ Governance Framework Development**
+- Development workflow standards and coding practices
+- Team collaboration protocols and decision-making processes
+- Quality assurance requirements and review procedures
+- Risk management and compliance frameworks
 
-**🧪 Test-Driven Development Integration**
-- Test-first sequence planning and coverage strategy
-- Quality gate establishment and validation checkpoints
-- Continuous integration requirements and automation setup
-- Performance testing and monitoring implementation
+**📋 Constitution Types**
+- Development constitutions for coding standards and practices
+- Collaboration constitutions for team coordination
+- Quality constitutions for testing and review processes
+- Architecture constitutions for design principles
+- Security constitutions for compliance and risk management
 
-**👥 Resource and Timeline Planning**
-- Skill requirement assessment and team capacity analysis
-- Risk evaluation and mitigation strategy development
-- Milestone definition and progress tracking setup
-- Timeline estimation and delivery scheduling
+**🎯 Prompt Generation**
+- Comprehensive constitution prompts for GitHub Spec Kit `/constitution`
+- Tailored governance frameworks based on team needs
+- Integration with existing project workflows and standards
+- Measurable success criteria and implementation guidance
 
-### Phase 4: Analysis (`/ska-analyze`)
-Comprehensive quality assessment and validation:
-
-**📊 Multi-Dimensional Assessment (Target: 85%+ across all dimensions)**
-
-*Completeness Analysis (25%)*
-- Functional completeness and requirement coverage
-- Edge case coverage and error scenario handling
-- Documentation completeness and decision rationale
-
-*Technical Feasibility (25%)*
-- Architecture validation and scalability assessment
-- Technology appropriateness and maturity evaluation
-- Implementation viability and resource realism
-
-*Business Alignment (25%)*
-- Requirements traceability and business value validation
-- Stakeholder alignment and user need satisfaction
-- Value proposition clarity and outcome measurability
-
-*Quality Assurance (25%)*
-- Testing strategy completeness and coverage adequacy
-- Risk mitigation effectiveness and contingency planning
-- Maintainability assessment and long-term sustainability
-
-**📋 Deliverables**
-- Quality scorecard with dimensional analysis
-- Gap identification and improvement recommendations
-- Risk assessment and mitigation strategies
-- Action plan with prioritized improvements
-
-### Phase 5: Export (`/ska-export`)
+### Phase 4: Export (`/ska-export`)
 Professional artifact creation and integration:
 
 **📄 Documentation Formats**
@@ -503,69 +467,69 @@ head .claude/commands/spec-kit-assistant/ska-start.md
 
 ## Advanced Usage
 
-### 🔍 Research-Driven Development Workflow
+### 🔍 Research-Driven Prompt Generation
 Perfect for legacy modernization and existing codebase improvement:
 
 ```bash
 # 1. Deep codebase analysis
 /ska-research deep
 
-# 2. Specify highest-impact improvements  
+# 2. Generate specification prompts for highest-impact improvements  
 /ska-start web-app
+# Result: Copy generated prompt → /specify [prompt]
 
-# 3. Architect modernization approach
+# 3. Generate technical planning prompts for modernization
 /ska-plan architecture
+# Result: Copy generated prompt → /plan [prompt]
 
-# 4. Phase implementation for minimal disruption
-/ska-tasks complex
+# 4. Create governance standards for team alignment
+/ska-constitution development
+# Result: Copy generated prompt → /constitution [prompt]
 
-# 5. Validate approach and risk assessment
-/ska-analyze all
-
-# 6. Create implementation roadmap
+# 5. Export implementation documentation
 /ska-export confluence
 ```
 
-### 🚀 Rapid Prototyping Workflow
+### 🚀 Rapid Specification Workflow
 For quick validation and MVP development:
 
 ```bash
-# 1. Quick concept specification
+# 1. Generate concept specification prompts
 /ska-start mobile-app
+# Result: Copy generated prompt → /specify [prompt]
 
-# 2. Simple technical approach  
+# 2. Generate simple technical planning prompts
 /ska-plan technology
+# Result: Copy generated prompt → /plan [prompt]
 
-# 3. Minimal viable tasks
-/ska-tasks simple
+# 3. Create basic team collaboration standards
+/ska-constitution collaboration
+# Result: Copy generated prompt → /constitution [prompt]
 
-# 4. Basic quality check
-/ska-analyze completeness
-
-# 5. Export for development
+# 4. Export for development teams
 /ska-export github-issues
 ```
 
-### 🏢 Enterprise Development Workflow
+### 🏢 Enterprise Governance Workflow
 For large-scale, multi-team projects:
 
 ```bash
 # 1. Comprehensive codebase audit
 /ska-research audit
 
-# 2. Detailed specification with stakeholders
+# 2. Generate detailed specification prompts with stakeholder input
 /ska-start dashboard
+# Result: Copy generated prompt → /specify [prompt]
 
-# 3. Enterprise architecture planning
+# 3. Generate enterprise architecture planning prompts
 /ska-plan architecture
+# Result: Copy generated prompt → /plan [prompt]
 
-# 4. Complex task breakdown with dependencies
-/ska-tasks enterprise
+# 4. Create comprehensive governance framework
+/ska-constitution enterprise
+# Result: Copy generated prompt → /constitution [prompt]
 
-# 5. Complete quality and risk analysis
-/ska-analyze all
-
-# 6. Export to project management
+# 5. Export to project management and documentation systems
 /ska-export jira
 ```
 
@@ -677,11 +641,10 @@ MIT License - see [LICENSE](LICENSE) file for details.
 ## Quick Start Summary
 
 1. **Install**: `npx spec-kit-assistant install`
-2. **Research**: `/ska-research standard` (for existing projects)
-3. **Specify**: `/ska-start web-app` (for new features)  
-4. **Plan**: `/ska-plan architecture`
-5. **Tasks**: `/ska-tasks moderate`
-6. **Analyze**: `/ska-analyze completeness`
-7. **Export**: `/ska-export markdown`
+2. **Research**: `/ska-research standard` (analyze existing codebase)
+3. **Generate Spec Prompt**: `/ska-start web-app` → Copy to `/specify [prompt]`
+4. **Generate Plan Prompt**: `/ska-plan architecture` → Copy to `/plan [prompt]`
+5. **Generate Constitution Prompt**: `/ska-constitution development` → Copy to `/constitution [prompt]`
+6. **Export**: `/ska-export markdown` (document results)
 
-Transform Claude Code into your personal specification development expert! 🚀
+Transform Claude Code into your personal GitHub Spec Kit prompt generator! 🚀
