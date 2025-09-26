@@ -81,10 +81,10 @@ Once installed, use these slash commands in Claude Code:
 ### Command Arguments
 
 #### `/ska-research` - Analysis Depths
-- `quick` - 15-20 min high-level overview
-- `standard` - 30-45 min comprehensive analysis (recommended)
-- `deep` - 1-2 hours thorough investigation  
-- `audit` - 2-4 hours complete security & performance assessment
+- `quick` - High-level overview and immediate opportunities
+- `standard` - Comprehensive analysis with detailed recommendations (recommended)
+- `deep` - Thorough investigation including dependency analysis
+- `audit` - Complete security & performance assessment
 
 #### `/ska-start` - Project Types  
 - `web-app` - Web applications and SaaS platforms

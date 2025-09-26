@@ -35,10 +35,10 @@ I'll systematically analyze your codebase to provide:
 ${1 ? `Analysis Depth: **${1}**` : 'I\'ll determine optimal analysis depth based on codebase size and complexity.'}
 
 **Available Depth Levels:**
-- **quick** - High-level overview and immediate opportunities (15-20 minutes)
-- **standard** - Comprehensive analysis with detailed recommendations (30-45 minutes)
-- **deep** - Thorough investigation including dependency analysis (1-2 hours)
-- **audit** - Complete codebase audit with security and performance assessment (2-4 hours)
+- **quick** - High-level overview and immediate opportunities
+- **standard** - Comprehensive analysis with detailed recommendations (recommended)
+- **deep** - Thorough investigation including dependency analysis
+- **audit** - Complete codebase audit with security and performance assessment
 
 ## 🔧 Research Process
 
